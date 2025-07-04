@@ -1,5 +1,5 @@
 def hello(x):
-    array_test = {"xyz","apple","banana","kiwi"}
+    array_test = ["xyz","apple","banana","kiwi"]
     array_test.sort()
     array_test.append("fruit")
     array_test.pop(3)
