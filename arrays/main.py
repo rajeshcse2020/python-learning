@@ -4,7 +4,7 @@ def hello(x):
     array_test.append("fruit")
     array_test.pop(3)
     array_test.reverse()
-    array_test.clear()
+    #array_test.clear()
     for x in range(len(array_test)):
         print(array_test[x])
 
