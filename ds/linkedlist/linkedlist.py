@@ -1,32 +1,20 @@
-def stack_demo():
-    stack = []
+class Node:
+  def __init__(self, data):
+    self.data = data
+    self.nextValue= None
 
-    # Push
-    stack.append('A')
-    stack.append('B')
-    stack.append('C')
-    print("Stack: ", stack)
 
-    # Peek
-    topElement = stack[-3]
-    print("Peek: ", topElement)
+def traversalNode(headData):
+          while headData:
+            print(headData.data, end="-->")
+            headData = headData.nextValue
+          print("null")
 
-    # Pop
-    poppedElement = stack.pop()
-    print("Pop: ", poppedElement)
+node1 = Node(1)
+node2 = Node(2)
+node3 = Node(3)
 
-    # Pop
-    poppedElement = stack.pop()
-    print("Pop: ", poppedElement)
+node1.nextValue = node2
+node2.nextValue = node3
 
-    # Stack after Pop
-    print("Stack after Pop: ", stack)
-
-    # isEmpty
-    isEmpty = not bool(stack)
-    print("isEmpty: ", isEmpty)
-
-    # Size
-    print("Size: ",len(stack))
-
-stack_demo()
+traversalNode(node1)
